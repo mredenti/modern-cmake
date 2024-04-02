@@ -2,17 +2,25 @@
 title: Introduction
 teaching: 10
 exercises: 0
-questions:
+---
+
+:::::::::::::::::::::::::::::::::::::: questions 
+
 - What is the difference between a build system and a build system generator?
 objectives:
 - Learn about build systems and build system generators.
 - Understand why CMake is used.
 - Newer CMake is better.
-keypoints:
-- Build systems describe exactly how to build targets.
-- Build system generators describe general relationships.
-- Modern CMake is simpler and reduces the chance of build problems.
----
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: objectives
+
+
+- Explain how to use markdown with The Carpentries Workbench
+- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 Building code is hard. You need long commands to build each part of your code; and you need do to
 this on many parts of your code.
@@ -143,3 +151,11 @@ There are some other places to find good information on the web. Here are some o
 {% include showlinks.md %}
 
 {% include links.md %}
+
+::::::::::::::::::::::::::::::::::::: keypoints 
+
+- Build systems describe exactly how to build targets.
+- Build system generators describe general relationships.
+- Modern CMake is simpler and reduces the chance of build problems.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
