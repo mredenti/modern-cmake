@@ -64,8 +64,9 @@ episodes:
 - 02-building.md
 - 03-cmakelists.md
 - 04-targets.md
-- 05-projectstructure.md
-- 06-commonproblems.md
+- 04-variables.md
+- 06-projectstructure.md
+- 07-commonproblems.md
 - 08-debugging.md
 - 09-findingpackages.md
 - 10-root.md
