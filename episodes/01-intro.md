@@ -93,6 +93,8 @@ outnumber the issues people open because you required a CMake newer than they wa
 I've only seen one of those, and they came around when they saw the feature they would have to give
 up).
 
+::::::::::::::::::::::::::::::::::::: callout
+
 > ## Example of Modern CMake
 >
 > **Bad 2.8 style CMake**: Adding a C++11 flag manually. This is compiler specific, is different for
@@ -106,7 +108,8 @@ up).
 > like `cxx_std_11`, instead of manually listing a bunch of features. This was used for C++17 and later
 > C++20 and C__23, exclusively.
 >
-{: .callout}
+> 
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 ## Selecting a minimum in 2023:
