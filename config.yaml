@@ -64,7 +64,7 @@ episodes:
 - 02-building.md
 - 03-cmakelists.md
 - 04-targets.md
-- 04-variables.md
+- 05-variables.md
 - 06-projectstructure.md
 - 07-commonproblems.md
 - 08-debugging.md
