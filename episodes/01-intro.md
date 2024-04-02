@@ -91,20 +91,18 @@ up).
 
 ::::::::::::::::::::::::::::::::::::: callout
 
-> ## Example of Modern CMake
->
-> **Bad 2.8 style CMake**: Adding a C++11 flag manually. This is compiler specific, is different for
-> CUDA, and locks in a set version, rather than a minimum version.
->
-> **If you require CMake 3.1+**, you can set `CXX_STANDARD`, but only on a final target. Or you can
-> manually list `compile_features` for individual C++11 and C++14 features, and, and all targets using
-> yours will get at least that level set on them.
->
-> **If you require CMake 3.8+**, you can just use `compile_features` to set a _minimium_ standard level,
-> like `cxx_std_11`, instead of manually listing a bunch of features. This was used for C++17 and later
-> C++20 and C__23, exclusively.
->
-> 
+## Example of Modern CMake
+
+**Bad 2.8 style CMake**: Adding a C++11 flag manually. This is compiler specific, is different for
+CUDA, and locks in a set version, rather than a minimum version.
+
+**If you require CMake 3.1+**, you can set `CXX_STANDARD`, but only on a final target. Or you can
+manually list `compile_features` for individual C++11 and C++14 features, and, and all targets using
+yours will get at least that level set on them.
+
+**If you require CMake 3.8+**, you can just use `compile_features` to set a _minimium_ standard level,
+like `cxx_std_11`, instead of manually listing a bunch of features. This was used for C++17 and later
+C++20 and C__23, exclusively.
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
