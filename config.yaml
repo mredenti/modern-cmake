@@ -14,7 +14,7 @@ carpentry: 'incubator'
 title: 'Modern CMake' # FIXME
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: ~ 2024-04-02
+created: ~ '2024-04-02'
 
 # Comma-separated list of keywords for the lesson
 keywords: 'lesson, The Carpentries, cmake' # FIXME
@@ -75,4 +75,5 @@ profiles:
 # This space below is where custom yaml items (e.g. pinning
 # sandpaper and varnish versions) should live
 
-
+url: 'https://mredenti.github.io/modern-cmake/'
+lang: en
