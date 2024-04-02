@@ -7,18 +7,14 @@ exercises: 0
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - What is the difference between a build system and a build system generator?
-objectives:
-- Learn about build systems and build system generators.
-- Understand why CMake is used.
-- Newer CMake is better.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-
-- Explain how to use markdown with The Carpentries Workbench
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- Learn about build systems and build system generators.
+- Understand why CMake is used.
+- Newer CMake is better.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
