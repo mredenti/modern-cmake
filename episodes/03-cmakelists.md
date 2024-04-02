@@ -19,7 +19,7 @@ keypoints:
 
 The following file is fine for the following examples:
 
-{% include hl_code.html file="code/00-intro/simple.c" lang="c" %}
+{% include hl_code.html file="files/00-intro/simple.c" lang="c" %}
 
 This file can be compiled with C or C++.
 
