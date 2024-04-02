@@ -61,16 +61,16 @@ contact: 'michael.redenti@gmail.com' # FIXME
 episodes: 
 - introduction.md
 - 01-intro.md
-- 02-building.md
-- 03-cmakelists.md
-- 04-targets.md
-- 05-variables.md
-- 06-projectstructure.md
-- 07-commonproblems.md
-- 08-debugging.md
-- 09-findingpackages.md
-- 10-root.md
-- 11-functions.md
+# - 02-building.md
+#- 03-cmakelists.md
+#- 04-targets.md
+#- 05-variables.md
+#- 06-projectstructure.md
+#- 07-commonproblems.md
+#- 08-debugging.md
+#- 09-findingpackages.md
+#- 10-root.md
+#- 11-functions.md
 
 # Information for Learners
 learners: 
