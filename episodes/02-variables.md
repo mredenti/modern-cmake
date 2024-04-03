@@ -304,6 +304,11 @@ conceptually acts more like set-if-not-set.
 - Cache variables allow the user to set variables and options which can be easily overriden from the command line without making changes to the CMakeLists.txt
 - Prefer to provide cache variables for controlling whether to enable optional parts of the build
 instead of encoding the logic in build scripts outside of CMake.
+Try to establish a variable naming convention early. For cache variables, consider grouping related
+variables under a common prefix followed by an underscore to take advantage of how CMake GUI
+groups variables based on the same prefix automatically. Also consider that the project may one
+day become a sub-part of some larger project, so a name beginning with the project name or
+something closely associated with the project may be desirable.
   
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
