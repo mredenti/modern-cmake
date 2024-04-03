@@ -122,9 +122,15 @@ cmake -D MY_VARIABLE="I am a cached variable" -P local.cmake
 
 ## Cache variables
 
-Now, let's look at cached variables; a key ingredient in all CMake builds. In a build, cached
+Now, let's look at cached variables. Unlike normal variables which have a lifetime limited to the processing of the CMakeLists.txt file, cache variables are stored in the special file called CMakeCache.txt in the build
+directory, and they persist between CMake runs. Once set, cache variables remain set until
+something explicitly removes them from the cache.
+
+; a key ingredient in all CMake builds. In a build, cached
 variables are set in the command line or in a graphical tool (such as `ccmake`, `cmake-gui`), and
-then written to a file called `CMakeCache.txt`. When you rerun, the cache is read in before
+then written to a file called `CMakeCache.txt`. 
+
+When you rerun, the cache is read in before
 starting, so that CMake "remembers" what you ran it with. For our example, we will use CMake in
 script mode, and that will not write out a cache, which makes it easier to play with. Feel free to
 look back at the example you built in the last lesson and investigate the `CMakeCache.txt` file in
@@ -179,7 +185,7 @@ You can check to see if an environment variable is defined with `if(DEFINED ENV{
 
 ## Note
 
-Note that setting an environment variable like this only affects the currently running CMake
+Setting an environment variable like this only affects the currently running CMake
 instance. As soon as the CMake run is finished, the change to the environment variable is lost. In
 particular, the change to the environment variable will not be visible at build time.
 
