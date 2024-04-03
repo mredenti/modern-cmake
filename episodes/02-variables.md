@@ -166,10 +166,12 @@ linkers, and so on. Later chapters cover these and other uses of cache variables
 
 Try the following:
 
-- Remove the quotes in set. What happens?
 - Try setting a cached variable using `-DMY_VARIABLE=something` **before** the `-P` flag. Which variable is shown?
 
 :::::::::::::::::::::::::::::::::::::: discussion
+
+CMake allows cache variables to be manipulated directly via command line options passed to cmake.
+The primary workhorse is the -D option, which is used to define the value of a cache variable.
 
 The normal set command *only* sets the cached variable if it is not already set - this allows you to
 override cached variables with `-D`. Try:
@@ -178,9 +180,10 @@ override cached variables with `-D`. Try:
 cmake -DMY_CACHE_VAR="command line" -P cache.cmake
 ```
 
+There are certain situations where caching the results of an intensive query or computation would benefit the compilation times. In these situations, you can use the
+keyword `INTERNAL`, identical to `STRING FORCE`, which hides the variable from listings/GUIs.
 You can use `FORCE` to set a cached variable even if it already set; this should not be very common.
-Since cached variables are global, sometimes they get used as a makeshift global variable - the
-keyword `INTERNAL` is identical to `STRING FORCE`, and hides the variable from listings/GUIs.
+Since cached variables are global, sometimes they get used as a makeshift global variable.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
