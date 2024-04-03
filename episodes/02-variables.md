@@ -148,6 +148,18 @@ variables and descriptions.
 
 :::::::::::::::::::::::::::::::::::::::::::::::::: 
 
+:::::::::::::::::::::::::::::::::::::::: instructor
+
+Cache variables are primarily intended as a customization point for developers. Rather than hardcoding
+the value in the CMakeLists.txt file as a normal variable, a cache variable can be used so that
+the developer can override the value without having to edit the CMakeLists.txt file. Cache variables
+can be set on the cmake command line or modified by interactive GUI tools without having to change
+anything in the project itself. Using these customization points, the developer can turn different
+parts of the build on or off, set paths to external packages, use different flags for compilers and
+linkers, and so on. Later chapters cover these and other uses of cache variables.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::: 
+
 :::::::::::::::::::::::::::::::::::::::: challenge
 
 ## More about normal variables
@@ -260,8 +272,7 @@ classic rule of CMake was "never glob"; the new rule is "never glob, but if you 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
 - Local variables work in this directory or below.
-- Cached variables are stored between runs.
-- You can access environment variables, properties, and more.
+- The main difference between a normal and a cache variable is that the latter can be ovveriden without having to edit the `CMakeLists.txt` file.
 - You can glob to collect files from disk, but it might not always be a good idea.
   
 ::::::::::::::::::::::::::::::::::::::::::::::::::
