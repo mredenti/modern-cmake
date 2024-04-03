@@ -169,7 +169,7 @@ Try the following:
 - Remove the quotes in set. What happens?
 - Try setting a cached variable using `-DMY_VARIABLE=something` **before** the `-P` flag. Which variable is shown?
 
-:::::::::::::::::::::::::::::::::::::::: discussion
+:::::::::::::::::::::::::::::::::::::: discussion
 
 The normal set command *only* sets the cached variable if it is not already set - this allows you to
 override cached variables with `-D`. Try:
@@ -182,9 +182,11 @@ You can use `FORCE` to set a cached variable even if it already set; this should
 Since cached variables are global, sometimes they get used as a makeshift global variable - the
 keyword `INTERNAL` is identical to `STRING FORCE`, and hides the variable from listings/GUIs.
 
-:::::::::::::::::::::::::::::::::::::::::::::::::: 
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::::::::::::: 
+
+:::::::::::::::::::::::::::::::::::::::: callout
 
 Since bool cached variables are so common for builds, there is a shortcut syntax for making one
 using [`option`][]:
@@ -192,6 +194,8 @@ using [`option`][]:
 ```cmake
 option(MY_OPTION "On or off" OFF)
 ```
+
+:::::::::::::::::::::::::::::::::::::::::::::::::: 
 
 ## Environment variables
 
@@ -277,6 +281,15 @@ things like a tooltip or one-line description for the cache variable. The docstr
 consist of plain text with no HTML markup. It can be an empty string.
 CMake will always treat a variable as a string during processing. The type is used mostly to improve
 the user experience in GUI tools, with some important exceptions discussed later in this section.
+
+This is why we care about cache variables which can not be changed - caching the results of an 
+intensive query or computation.
+
+INTERNAL
+The variable is not intended to be made available to the user. Internal cache variables are
+sometimes used to persistently record internal information by the project, such as caching the
+result of an intensive query or computation. GUI tools do not show INTERNAL variables. INTERNAL
+also implies FORCE.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
