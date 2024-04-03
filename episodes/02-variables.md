@@ -32,14 +32,25 @@ This way, we don't have so many little builds sitting around.
 
 ## Local variables
 
-The most basic way of defining a variable is with the ==set()== command.
-Let's start with a local variable.
+The most basic way of defining a variable is with the `set()` command. A normal variable can be defined
+in a CMakeLists.txt file as follows:
 
 ```cmake
 # local.cmake
-set(MY_VARIABLE "I am a variable")
+set(MY_VARIABLE "I am a variable") # set(varName value... [PARENT_SCOPE])
 message(STATUS "${MY_VARIABLE}")
 ```
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+
+The name of the variable, varName, can contain letters, numbers and underscores, with letters being
+case-sensitive. The name may also contain the characters ./-+ but these are rarely seen in practice.
+
+In CMake, a variable has a particular scope, much like how variables in other languages have scope
+limited to a particular function, file, etc. A variable cannot be read or modified outside its own
+scope.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Here we see the [`set`][] command, which sets a variable, and the [`message`] command, which prints
 out a string. We are printing a `STATUS` [`message`][] - there are other types (many other types in
