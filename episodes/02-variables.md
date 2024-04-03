@@ -162,7 +162,7 @@ linkers, and so on. Later chapters cover these and other uses of cache variables
 
 :::::::::::::::::::::::::::::::::::::::: challenge
 
-## More about normal variables
+## Setting Cache Values On The Command Line
 
 Try the following:
 
