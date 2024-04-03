@@ -163,6 +163,9 @@ linkers, and so on. Later chapters cover these and other uses of cache variables
 
 ## Setting Cache Values On The Command Line
 
+Setting cache variables via the command line is an essential part of automated build scripts and
+anything else driving CMake via the cmake command.
+
 Try the following:
 
 - Try setting a cached variable using `-DMY_VARIABLE=something` **before** the `-P` flag. Which variable is shown?
@@ -276,6 +279,17 @@ sometimes used to persistently record internal information by the project, such 
 result of an intensive query or computation. GUI tools do not show INTERNAL variables. INTERNAL
 also implies FORCE.
 
+There is a special case for handling values initially declared without a type on the cmake command
+line. If the project’s CMakeLists.txt file then tries to set the same cache variable and specifies a type
+of FILEPATH or PATH, then if the value of that cache variable is a relative path, CMake will treat it as
+being relative to the directory from which cmake was invoked and automatically convert it to an
+absolute path. This is not particularly robust, since cmake could be invoked from any directory, not
+just the build directory. Therefore, developers are advised to always include a type if specifying a
+variable on the cmake command line for a variable that represents some kind of path. It is a good
+habit to always specify the type of the variable on the command line in general anyway so that it is
+likely to be shown in GUI applications in the most appropriate form. It will also prevent one of the
+surprising behavior scenarios mentioned in the previous section.
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
@@ -287,6 +301,7 @@ also implies FORCE.
 is that the set() command will only overwrite a cache variable if the FORCE keyword is present.
 When used to define cache variables without the FORCE keyword, the set() command
 conceptually acts more like set-if-not-set.
+- Cache variables allow the user to set variables and options which can be easily overriden from the command line without making changes to the CMakeLists.txt
   
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
