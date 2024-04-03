@@ -111,12 +111,13 @@ access and set these. You can [see a list of all
 properties](https://cmake.org/cmake/help/latest/manual/cmake-properties.7.html) by CMake version;
 there is no way to get this programmatically.
 
+:::::::::::::::::::::::::::::::::::::::::  callout
 
-> ## Handy tip:
-> Use [`include(CMakePrintHelpers)`][`CMakePrintHelpers`] to add the useful commands
-> `cmake_print_properties` and `cmake_print_variables` to save yourself some typing when debugging
-> variables and properties.
-{:.callout}
+## Handy tip:
+Use [`include(CMakePrintHelpers)`][`CMakePrintHelpers`] to add the useful commands
+`cmake_print_properties` and `cmake_print_variables` to save yourself some typing when debugging variables and properties.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Target properties and variables
 
@@ -158,8 +159,6 @@ classic rule of CMake was "never glob"; the new rule is "never glob, but if you 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-
-{% include cmake_links.md %}
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
