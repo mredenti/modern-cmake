@@ -25,7 +25,7 @@ The command to do so is:
 
 ```bash
 # Assuming you have a file called example.cmake:
-cmake -P example.cmake
+$ cmake -P example.cmake
 ```
 
 This way, we don't have so many little builds sitting around.
@@ -105,7 +105,7 @@ message(STATUS "${MY_VARIABLE}")
 ```
 
 ```bash
-cmake -P local.cmake
+$ cmake -P local.cmake
 ```
 
 ```output
