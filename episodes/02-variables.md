@@ -126,7 +126,7 @@ Now, let's look at cache variables:
 
 ```cmake
 # cache.cmake
-set(MY_CACHE_VAR "I am a cached variable" CACHE STRING "Description")
+set(MY_CACHE_VAR "I am a cache variable" CACHE STRING "Description")
 message(STATUS "${MY_CACHE_VAR}")
 ```
 
