@@ -65,7 +65,7 @@ Try the following:
 
 - Remove the quotes in set. What happens?
 - Remove the quotes in message. What happens? Why?
-- Try setting a cached variable using `-DMY_VARIABLE=something` *before* the `-P`. Which variable is shown?
+- Try setting a cached variable using `-DMY_VARIABLE=something` **before** the `-P`. Which variable is shown?
 
 :::::::::::::::::::::::::::::::::::::::: solution
 
