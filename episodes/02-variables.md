@@ -66,7 +66,17 @@ They can also contain quotes, which require escaping with backslashes.
 If using CMake 3.0 or later, an alternative to quotes is to use the lua-inspired bracket syntax where
 the start of the content is marked by [=[ and the end with ]=]. Any number of = characters can
 appear between the square brackets, including none at all, but the same number of = characters
-must be used at the start and the end. 
+must be used at the start and the end.
+
+A variable can be unset either by calling unset() or by calling set() with no value for the named
+variable. The following are equivalent, with no error or warning if myVar does not already exist:
+
+```cmake
+
+set(myVar)
+unset(myVar)
+
+```
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
