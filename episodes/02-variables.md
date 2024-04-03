@@ -268,6 +268,17 @@ classic rule of CMake was "never glob"; the new rule is "never glob, but if you 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
+:::::::::::::::::::::::::::::::::::::::: instructor
+
+Cache variables have more information attached to them than a normal variable, including a
+nominal type and a documentation string. Both must be provided when setting a cache variable.
+The docstring does not affect how CMake treats the variable. It is used only by GUI tools to provide
+things like a tooltip or one-line description for the cache variable. The docstring should be short and
+consist of plain text with no HTML markup. It can be an empty string.
+CMake will always treat a variable as a string during processing. The type is used mostly to improve
+the user experience in GUI tools, with some important exceptions discussed later in this section.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::: keypoints
 
