@@ -33,7 +33,7 @@ This way, we don't have so many little builds sitting around.
 ## Local variables
 
 The most basic way of defining a variable is with the `set()` command. A normal variable can be defined
-in a CMakeLists.txt file as follows:
+in a `CMakeLists.txt` file as follows:
 
 ```cmake
 # local.cmake
@@ -52,9 +52,11 @@ scope.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
-Here we see the [`set`][] command, which sets a variable, and the [`message`] command, which prints
-out a string. We are printing a `STATUS` [`message`][] - there are other types (many other types in
-CMake 3.15+).
+Here we see the `set()` command, which sets a variable, and the `message()` command, which prints
+out a string. We are printing a `STATUS` `message` - there are other types (many other types in
+CMake 3.15+) [place link to repository].
+
+The optional <mode> keyword determines the type of message, which influences the way the message is handled
 
 
 
