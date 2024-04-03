@@ -175,19 +175,15 @@ set(ENV{PATH} "$ENV{PATH}:/opt/myDir")
 
 You can check to see if an environment variable is defined with `if(DEFINED ENV{name})` (notice the missing `$`).
 
-:::::::::::::::::::::::::::::::::::::::::  warning
+::::::::::::::::::::::::::::::::::::::::: callout
+
+## Note
 
 Note that setting an environment variable like this only affects the currently running CMake
 instance. As soon as the CMake run is finished, the change to the environment variable is lost. In
 particular, the change to the environment variable will not be visible at build time.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
-Properties are a form of variable that is attached to a target; you can use [`get_property`][] and
-[`set_property`][], or [`get_target_properties`][] and [`set_target_properties`][] (stylistic preference) to
-access and set these. You can [see a list of all
-properties](https://cmake.org/cmake/help/latest/manual/cmake-properties.7.html) by CMake version;
-there is no way to get this programmatically.
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
@@ -199,8 +195,13 @@ Use [`include(CMakePrintHelpers)`][`CMakePrintHelpers`] to add the useful comman
 
 ## Target properties and variables
 
-You have seen targets; they have properties attached that control their behavior. Many of these
-properties, such as [`CXX_EXTENSIONS`][], have a matching variable that starts with `CMAKE_`, such
+You have seen targets; they have properties attached that control their behavior. 
+Properties are a form of variable that is attached to a target; you can use [`get_property`][] and
+[`set_property`][], or [`get_target_properties`][] and [`set_target_properties`][] (stylistic preference) to
+access and set these. You can [see a list of all
+properties](https://cmake.org/cmake/help/latest/manual/cmake-properties.7.html) by CMake version;
+there is no way to get this programmatically.
+Many of these properties, such as [`CXX_EXTENSIONS`][], have a matching variable that starts with `CMAKE_`, such
 as [`CMAKE_CXX_EXTENSIONS`][], that will be used to initialize them. So you can using set property
 on each target by setting a variable before making the targets.
 
