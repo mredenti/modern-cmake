@@ -61,10 +61,10 @@ contact: 'michael.redenti@gmail.com' # FIXME
 episodes: 
 - introduction.md
 - 01-intro.md
+- 02-variables.md
 # - 02-building.md
 #- 03-cmakelists.md
 #- 04-targets.md
-- 05-variables.md
 #- 06-projectstructure.md
 #- 07-commonproblems.md
 #- 08-debugging.md
