@@ -70,6 +70,12 @@ Try the following:
 
 :::::::::::::::::::::::::::::::::::::::: solution
 
+CMake treats all variables as strings. In various contexts, variables may be interpreted as a
+different type, but ultimately, they are just strings. When setting a variable’s value, CMake doesn’t
+require those values to be quoted unless the value contains spaces. If multiple values are given, the
+values will be joined together with a semicolon separating each value - the resultant string is how
+CMake represents lists.
+
 ```cmake
 # local.cmake
 set(MY_VARIABLE I am a local variable) # set(varName value... [PARENT_SCOPE])
