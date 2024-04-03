@@ -74,15 +74,11 @@ CMake 3.15+) [place link to repository].
 Try the following:
 
 - Remove the quotes in set. What happens?
-- Try setting a cached variable using `-DMY_VARIABLE=something` **before** the `-P`. Which variable is shown?
+- Try setting a cached variable using `-DMY_VARIABLE=something` **before** the `-P` flag. Which variable is shown?
 
 :::::::::::::::::::::::::::::::::::::::: solution
 
-CMake treats all variables as strings. In various contexts, variables may be interpreted as a
-different type, but ultimately, they are just strings. When setting a variable’s value, CMake doesn’t
-require those values to be quoted unless the value contains spaces. If multiple values are given, the
-values will be joined together with a semicolon separating each value - the resultant string is how
-CMake represents lists.
+CMake treats all variables as strings. In various contexts (e.g. CMake GUI and TUI), variables may be interpreted as a different type, but ultimately, they are just strings. When setting a variable’s value, CMake doesn’t require those values to be quoted unless the value contains spaces. If multiple values are given, the values will be joined together with a semicolon separating each value - the resultant string is how CMake represents lists.
 
 ```cmake
 # local.cmake
