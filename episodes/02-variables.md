@@ -274,6 +274,10 @@ classic rule of CMake was "never glob"; the new rule is "never glob, but if you 
 - Local variables work in this directory or below.
 - The main difference between a normal and a cache variable is that the latter can be ovveriden without having to edit the `CMakeLists.txt` file.
 - You can glob to collect files from disk, but it might not always be a good idea.
+- An important difference between normal and cache variables
+is that the set() command will only overwrite a cache variable if the FORCE keyword is present.
+When used to define cache variables without the FORCE keyword, the set() command
+conceptually acts more like set-if-not-set.
   
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
