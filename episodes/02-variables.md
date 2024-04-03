@@ -37,7 +37,7 @@ in a `CMakeLists.txt` file as follows:
 
 ```cmake
 # local.cmake
-set(MY_VARIABLE "I am a variable") # set(varName value... [PARENT_SCOPE])
+set(MY_VARIABLE "I am a local variable") # set(varName value... [PARENT_SCOPE])
 message(STATUS "${MY_VARIABLE}")
 ```
 
@@ -49,6 +49,8 @@ case-sensitive. The name may also contain the characters ./-+ but these are rare
 In CMake, a variable has a particular scope, much like how variables in other languages have scope
 limited to a particular function, file, etc. A variable cannot be read or modified outside its own
 scope.
+
+The names of variables are usually all caps, and the value follows. You access a variable by using ${}, such as ${MY_VARIABLE}.1 CMake has the concept of scope; you can access the value of the variable after you set it as long as you are in the same scope. If you leave a function or a file in a sub directory, the variable will no longer be defined. You can set a variable in the scope immediately above your current one with PARENT_SCOPE at the end.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -64,12 +66,24 @@ CMake 3.15+) [place link to repository].
 Try the following:
 
 - Remove the quotes in set. What happens?
-- Remove the quotes in message. What happens? Why?
 - Try setting a cached variable using `-DMY_VARIABLE=something` **before** the `-P`. Which variable is shown?
 
 :::::::::::::::::::::::::::::::::::::::: solution
 
-put the solution
+```cmake
+# local.cmake
+set(MY_VARIABLE I am a local variable) # set(varName value... [PARENT_SCOPE])
+message(STATUS "${MY_VARIABLE}")
+```
+
+```bash
+cmake -P local.cmake
+-- I;am;a;variable
+```
+
+```bash
+cmake -D MY_VARIABLE="I am a cached variable" -P local.cmake
+```
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
