@@ -53,11 +53,8 @@ scope.
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Here we see the `set()` command, which sets a variable, and the `message()` command, which prints
-out a string. We are printing a `STATUS` `message` - there are other types (many other types in
+out a string. The optional <mode> keyword `STATUS` determines the type of message, which influences the way the message is handled - there are other types (many other types in
 CMake 3.15+) [place link to repository].
-
-The optional <mode> keyword determines the type of message, which influences the way the message is handled
-
 
 
 :::::::::::::::::::::::::::::::::::::::: challenge
@@ -65,9 +62,9 @@ The optional <mode> keyword determines the type of message, which influences the
 ## More about variables
 
 Try the following:
-* Remove the quotes in set. What happens?
-* Remove the quotes in message. What happens? Why?
-* Try setting a cached variable using `-DMY_VARIABLE=something` *before* the `-P`. Which variable is shown?
+- Remove the quotes in set. What happens?
+- Remove the quotes in message. What happens? Why?
+- Try setting a cached variable using `-DMY_VARIABLE=something` *before* the `-P`. Which variable is shown?
 
 :::::::::::::::::::::::::::::::::::::::: solution
 
