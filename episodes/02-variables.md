@@ -52,6 +52,14 @@ scope.
 
 The names of variables are usually all caps, and the value follows. You access a variable by using ${}, such as ${MY_VARIABLE}.1 CMake has the concept of scope; you can access the value of the variable after you set it as long as you are in the same scope. If you leave a function or a file in a sub directory, the variable will no longer be defined. You can set a variable in the scope immediately above your current one with PARENT_SCOPE at the end.
 
+
+CMake is particularly flexible in that it is also possible to use this form recursively or to
+specify the name of another variable to set. In addition, CMake doesn’t require variables to be
+defined before using them. Use of an undefined variable simply results in an empty string being
+substituted, similar to the way Unix shell scripts behave. By default, no warning is issued for use of
+an undefined variable, but the --warn-uninitialized option can be given to the cmake command to
+enable such warnings.
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Here we see the `set()` command, which sets a variable, and the `message()` command, which prints
