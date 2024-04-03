@@ -106,6 +106,9 @@ message(STATUS "${MY_VARIABLE}")
 
 ```bash
 cmake -P local.cmake
+```
+
+```output
 -- I;am;a;variable
 ```
 
@@ -162,9 +165,19 @@ option(MY_OPTION "On or off" OFF)
 
 ## Environment variables
 
-You can get environment variables with `$ENV{name}`. You can check to see if an environment variable
-is defined with `if(DEFINED ENV{name})` (notice the missing `$`).
+Although rarely useful, CMake also allows the value of environment variables to be retrieved and set using a modified form of the CMake variable notation. The following example shows how to retrieve and set an environment variable:
 
+```cmake
+
+set(ENV{PATH} "$ENV{PATH}:/opt/myDir")
+
+```
+
+You can check to see if an environment variable is defined with `if(DEFINED ENV{name})` (notice the missing `$`).
+
+Note that setting an environment variable like this only affects the currently running CMake
+instance. As soon as the CMake run is finished, the change to the environment variable is lost. In
+particular, the change to the environment variable will not be visible at build time.
 
 Properties are a form of variable that is attached to a target; you can use [`get_property`][] and
 [`set_property`][], or [`get_target_properties`][] and [`set_target_properties`][] (stylistic preference) to
