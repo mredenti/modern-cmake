@@ -3,10 +3,10 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
 
-[pandoc]: https://pandoc.org/MANUAL.html
-[r-markdown]: https://rmarkdown.rstudio.com/
-[rstudio]: https://www.rstudio.com/
-[carpentries-workbench]: https://carpentries.github.io/sandpaper-docs/
+[pandoc]:                                       https://pandoc.org/MANUAL.html
+[r-markdown]:                                   https://rmarkdown.rstudio.com/
+[rstudio]:                                      https://www.rstudio.com/
+[carpentries-workbench]:                        https://carpentries.github.io/sandpaper-docs/
 [break]:                                        https://cmake.org/cmake/help/latest/command/break.html
 [cmake_host_system_information]:                https://cmake.org/cmake/help/latest/command/cmake_host_system_information.html
 [cmake_language]:                               https://cmake.org/cmake/help/latest/command/cmake_language.html
@@ -232,7 +232,7 @@ any links that you are not going to use.
 [CMAKE_VS_PLATFORM_NAME_DEFAULT]:               https://cmake.org/cmake/help/latest/variable/CMAKE_VS_PLATFORM_NAME_DEFAULT.html
 [CMAKE_VS_PLATFORM_TOOLSET]:                    https://cmake.org/cmake/help/latest/variable/CMAKE_VS_PLATFORM_TOOLSET.html
 [CMAKE_VS_PLATFORM_TOOLSET_CUDA]:               https://cmake.org/cmake/help/latest/variable/CMAKE_VS_PLATFORM_TOOLSET_CUDA.html
-[CMAKE_VS_PLATFORM_TOOLSET_CUDA_CUSTOM_DIR]:    https://cmake.org/cmake/help/latest/variable/CMAKE_VS_PLATFORM_TOOLSET_CUDA_CUSTOM_DIR.html
+[CMAKE_VS_PLATFORM_TOOLSET_CUDA_CUSTOM_DIR]: https://cmake.org/cmake/help/latest/variable/CMAKE_VS_PLATFORM_TOOLSET_CUDA_CUSTOM_DIR.html
 [CMAKE_VS_PLATFORM_TOOLSET_HOST_ARCHITECTURE]:  https://cmake.org/cmake/help/latest/variable/CMAKE_VS_PLATFORM_TOOLSET_HOST_ARCHITECTURE.html
 [CMAKE_VS_PLATFORM_TOOLSET_VERSION]:            https://cmake.org/cmake/help/latest/variable/CMAKE_VS_PLATFORM_TOOLSET_VERSION.html
 [CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION]:     https://cmake.org/cmake/help/latest/variable/CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION.html
@@ -351,9 +351,9 @@ any links that you are not going to use.
 [CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION]:   https://cmake.org/cmake/help/latest/variable/CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION.html
 [CMAKE_XCODE_GENERATE_TOP_LEVEL_PROJECT_ONLY]:  https://cmake.org/cmake/help/latest/variable/CMAKE_XCODE_GENERATE_TOP_LEVEL_PROJECT_ONLY.html
 [CMAKE_XCODE_SCHEME_ADDRESS_SANITIZER]:         https://cmake.org/cmake/help/latest/variable/CMAKE_XCODE_SCHEME_ADDRESS_SANITIZER.html
-[CMAKE_XCODE_SCHEME_ADDRESS_SANITIZER_USE_AFTER_RETURN]:https://cmake.org/cmake/help/latest/variable/CMAKE_XCODE_SCHEME_ADDRESS_SANITIZER_USE_AFTER_RETURN.html
+[CMAKE_XCODE_SCHEME_ADDRESS_SANITIZER_USE_AFTER_RETURN]: https://cmake.org/cmake/help/latest/variable/CMAKE_XCODE_SCHEME_ADDRESS_SANITIZER_USE_AFTER_RETURN.html
 [CMAKE_XCODE_SCHEME_DEBUG_DOCUMENT_VERSIONING]: https://cmake.org/cmake/help/latest/variable/CMAKE_XCODE_SCHEME_DEBUG_DOCUMENT_VERSIONING.html
-[CMAKE_XCODE_SCHEME_DISABLE_MAIN_THREAD_CHECKER]:https://cmake.org/cmake/help/latest/variable/CMAKE_XCODE_SCHEME_DISABLE_MAIN_THREAD_CHECKER.html
+[CMAKE_XCODE_SCHEME_DISABLE_MAIN_THREAD_CHECKER]: https://cmake.org/cmake/help/latest/variable/CMAKE_XCODE_SCHEME_DISABLE_MAIN_THREAD_CHECKER.html
 [CMAKE_XCODE_SCHEME_DYNAMIC_LIBRARY_LOADS]:     https://cmake.org/cmake/help/latest/variable/CMAKE_XCODE_SCHEME_DYNAMIC_LIBRARY_LOADS.html
 [CMAKE_XCODE_SCHEME_DYNAMIC_LINKER_API_USAGE]:  https://cmake.org/cmake/help/latest/variable/CMAKE_XCODE_SCHEME_DYNAMIC_LINKER_API_USAGE.html
 [CMAKE_XCODE_SCHEME_ENVIRONMENT]:               https://cmake.org/cmake/help/latest/variable/CMAKE_XCODE_SCHEME_ENVIRONMENT.html
