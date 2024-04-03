@@ -45,16 +45,24 @@ Here we see the [`set`][] command, which sets a variable, and the [`message`] co
 out a string. We are printing a `STATUS` [`message`][] - there are other types (many other types in
 CMake 3.15+).
 
-> ## More about variables
->
-> Try the following:
-> * Remove the quotes in set. What happens?
-> * Remove the quotes in message. What happens? Why?
-> * Try setting a cached variable using `-DMY_VARIABLE=something` *before* the `-P`. Which variable
->   is shown?
->
-{:.challenge}
 
+
+:::::::::::::::::::::::::::::::::::::::: challenge
+
+## More about variables
+
+Try the following:
+* Remove the quotes in set. What happens?
+* Remove the quotes in message. What happens? Why?
+* Try setting a cached variable using `-DMY_VARIABLE=something` *before* the `-P`. Which variable is shown?
+
+:::::::::::::::::::::::::::::::::::::::: solution
+
+put the solution
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Cached variables
 
