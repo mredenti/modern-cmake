@@ -159,5 +159,6 @@ There are some other places to find good information on the web. Here are some o
 - Build systems describe exactly how to build targets.
 - Build system generators describe general relationships.
 - Modern CMake is simpler and reduces the chance of build problems.
+- CMake is not a build system, it is a cross-platform build generator.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
