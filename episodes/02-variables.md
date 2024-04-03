@@ -87,7 +87,7 @@ CMake 3.15+) [place link to repository].
 
 :::::::::::::::::::::::::::::::::::::::: challenge
 
-## More about variables
+## More about normal variables
 
 Try the following:
 
@@ -122,23 +122,7 @@ cmake -D MY_VARIABLE="I am a cached variable" -P local.cmake
 
 ## Cache variables
 
-Now, let's look at cached variables. Unlike normal variables which have a lifetime limited to the processing of the CMakeLists.txt file, cache variables are stored in the special file called CMakeCache.txt in the build
-directory, and they persist between CMake runs. Once set, cache variables remain set until
-something explicitly removes them from the cache.
-
-; a key ingredient in all CMake builds. In a build, cached
-variables are set in the command line or in a graphical tool (such as `ccmake`, `cmake-gui`), and
-then written to a file called `CMakeCache.txt`. 
-
-When you rerun, the cache is read in before
-starting, so that CMake "remembers" what you ran it with. For our example, we will use CMake in
-script mode, and that will not write out a cache, which makes it easier to play with. Feel free to
-look back at the example you built in the last lesson and investigate the `CMakeCache.txt` file in
-your build directory there. Things like the compiler location, as discovered or set on the first
-run, are cached.
-
-
-Here's what a cached variable looks like:
+Now, let's look at cache variables: 
 
 ```cmake
 # cache.cmake
@@ -146,10 +130,34 @@ set(MY_CACHE_VAR "I am a cached variable" CACHE STRING "Description")
 message(STATUS "${MY_CACHE_VAR}")
 ```
 
+Unlike normal variables which have a lifetime limited to the processing of the CMakeLists.txt file, cache variables are stored in a special file called `CMakeCache.txt` in the build directory, and they persist between CMake runs. When you rerun the files generation stage, the cache is read in before starting
+
+Once set, cache variables remain set until something explicitly removes them from the cache.
+
+In a build, cached variables are set in the command line or in a graphical tool (such as `ccmake`, `cmake-gui`), and then written to a file called `CMakeCache.txt`. 
+
+Feel free to look back at the example you built in the last lesson and investigate the `CMakeCache.txt` file in your build directory there. Things like the compiler location, as discovered or set on the first
+run, are cached.
+
+:::::::::::::::::::::::::::::::::::::::: callout
+
 We have to include the variable type here, which we didn't have to do before (but we could have) -
 it helps graphical CMake tools show the correct options. The main difference is the `CACHE` keyword
 and the description. If you were to run `cmake -L` or `cmake -LH`, you would see all the cached
 variables and descriptions.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::: 
+
+:::::::::::::::::::::::::::::::::::::::: challenge
+
+## More about normal variables
+
+Try the following:
+
+- Remove the quotes in set. What happens?
+- Try setting a cached variable using `-DMY_VARIABLE=something` **before** the `-P` flag. Which variable is shown?
+
+:::::::::::::::::::::::::::::::::::::::: solution
 
 The normal set command *only* sets the cached variable if it is not already set - this allows you to
 override cached variables with `-D`. Try:
@@ -161,6 +169,10 @@ cmake -DMY_CACHE_VAR="command line" -P cache.cmake
 You can use `FORCE` to set a cached variable even if it already set; this should not be very common.
 Since cached variables are global, sometimes they get used as a makeshift global variable - the
 keyword `INTERNAL` is identical to `STRING FORCE`, and hides the variable from listings/GUIs.
+
+:::::::::::::::::::::::::::::::::::::::::::::::::: 
+
+:::::::::::::::::::::::::::::::::::::::::::::::::: 
 
 Since bool cached variables are so common for builds, there is a shortcut syntax for making one
 using [`option`][]:
