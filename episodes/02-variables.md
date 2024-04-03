@@ -99,7 +99,7 @@ CMake treats all variables as strings. In various contexts (e.g. CMake GUI and T
 
 ```cmake
 # local.cmake
-set(MY_VARIABLE I am a local variable) # set(varName value... [PARENT_SCOPE])
+set(MY_VARIABLE I am a local variable) 
 message(STATUS "${MY_VARIABLE}")
 ```
 
@@ -302,6 +302,8 @@ is that the set() command will only overwrite a cache variable if the FORCE keyw
 When used to define cache variables without the FORCE keyword, the set() command
 conceptually acts more like set-if-not-set.
 - Cache variables allow the user to set variables and options which can be easily overriden from the command line without making changes to the CMakeLists.txt
+- Prefer to provide cache variables for controlling whether to enable optional parts of the build
+instead of encoding the logic in build scripts outside of CMake.
   
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
