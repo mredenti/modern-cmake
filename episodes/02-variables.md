@@ -6,9 +6,8 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::: objectives
 
-- Learn about local variables.
+- Learn about local, cache and environment variables.
 - Understand that cached variables persist across runs.
-- Know how to glob, and why you might not do it.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -185,6 +184,13 @@ keyword `INTERNAL`, identical to `STRING FORCE`, which hides the variable from l
 You can use `FORCE` to set a cached variable even if it already set; this should not be very common.
 Since cached variables are global, sometimes they get used as a makeshift global variable.
 
+**Note**
+
+What is the different behaviour that you observe from the previous challenge?
+
+The reason why the previous ovveriding of a normal variable did not work lies with an important point:
+normal and cache variables are two separate things. It is possible to have a normal variable and a cache variable with the same name, but holding different values.
+
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::::::::::::: 
@@ -241,30 +247,6 @@ there is no way to get this programmatically.
 Many of these properties, such as [`CXX_EXTENSIONS`][], have a matching variable that starts with `CMAKE_`, such
 as [`CMAKE_CXX_EXTENSIONS`][], that will be used to initialize them. So you can using set property
 on each target by setting a variable before making the targets.
-
-## Globbing
-
-There are several commands that help with [`string`][]s, [`file`][]s, [`lists`][], and the like.
-Let's take a quick look at one of the most interesting: glob.
-
-```cmake
-file(GLOB OUTPUT_VAR *.cxx)
-```
-
-This will make a list of all files that match the pattern and put it into `OUTPUT_VAR`. You can also
-use `GLOB_RECURSE`, which will recurse subdirectories. There are several useful options, which you
-can look at [in the
-documentation](https://cmake.org/cmake/help/latest/command/file.html?highlight=glob#filesystem), but
-one is particularly important: `CONFIGURE_DEPENDS` (CMake 3.12+).
-
-When you rerun the *build* step (not the configure step), then unless you set`CONFIGURE_DEPENDS`,
-your build tool will not check to see if you have added any new files that now pass the glob. This
-is the reason poorly written CMake projects often have issues when you are trying to add files; some
-people are in the habit of rerunning `cmake` before every build because of this. You shouldn't ever
-have to manually reconfigure; the build tool will rerun CMake as needed with this one exception. If
-you add `CONFIGURE_DEPENDS`, then *most* build tools will actually start checking glob too. The
-classic rule of CMake was "never glob"; the new rule is "never glob, but if you have to, add
-`CONFIGURE_DEPENDS`".
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
