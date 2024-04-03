@@ -1,1 +1,0 @@
-../../_includes/code/00-intro/simple.c
