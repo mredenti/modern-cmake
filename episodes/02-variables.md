@@ -30,7 +30,7 @@ $ cmake -P example.cmake
 
 This way, we don't have so many little builds sitting around.
 
-## Local variables
+## Normal variables
 
 The most basic way of defining a variable is with the `set()` command. A normal variable can be defined
 in a `CMakeLists.txt` file as follows:
@@ -120,7 +120,7 @@ cmake -D MY_VARIABLE="I am a cached variable" -P local.cmake
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Cached variables
+## Cache variables
 
 Now, let's look at cached variables; a key ingredient in all CMake builds. In a build, cached
 variables are set in the command line or in a graphical tool (such as `ccmake`, `cmake-gui`), and
