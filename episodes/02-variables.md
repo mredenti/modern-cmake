@@ -130,7 +130,7 @@ set(MY_CACHE_VAR "I am a cache variable" CACHE STRING "Description")
 message(STATUS "${MY_CACHE_VAR}")
 ```
 
-Unlike normal variables which have a lifetime limited to the processing of the CMakeLists.txt file, cache variables are stored in a special file called `CMakeCache.txt` in the build directory, and they persist between CMake runs. When you rerun the files generation stage, the cache is read in before starting
+Unlike normal variables which have a lifetime limited to the processing of the `CMakeLists.txt` file, cache variables are stored in a special file called `CMakeCache.txt` in the build directory, and they persist between CMake runs. When you rerun the files generation stage, the cache is read in before starting
 
 Once set, cache variables remain set until something explicitly removes them from the cache.
 
