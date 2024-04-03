@@ -1,19 +1,22 @@
 ---
-title: Variables explained
+title: Variables 
 teaching: 10
 exercises: 10
-questions:
-- How do variables work?
-objectives:
+---
+
+::::::::::::::::::::::::::::::::::::::: objectives
+
 - Learn about local variables.
 - Understand that cached variables persist across runs.
 - Know how to glob, and why you might not do it.
-keypoints:
-- Local variables work in this directory or below.
-- Cached variables are stored between runs.
-- You can access environment variables, properties, and more.
-- You can glob to collect files from disk, but it might not always be a good idea.
----
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::: questions
+
+- How do variables work?
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 # Variables
@@ -146,13 +149,25 @@ you add `CONFIGURE_DEPENDS`, then *most* build tools will actually start checkin
 classic rule of CMake was "never glob"; the new rule is "never glob, but if you have to, add
 `CONFIGURE_DEPENDS`".
 
-> ## More reading
->
-> * Based on [Modern CMake basics/variables][]
-> * Also see [CMake's docs](https://cmake.org/cmake/help/latest/index.html)
-{:.checklist}
+:::::::::::::::::::::::::::::::::::::::::  callout
+
+## More reading
+
+* Based on [Modern CMake basics/variables][]
+* Also see [CMake's docs](https://cmake.org/cmake/help/latest/index.html)
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
 {% include cmake_links.md %}
+
+:::::::::::::::::::::::::::::::::::::::: keypoints
+
+- Local variables work in this directory or below.
+- Cached variables are stored between runs.
+- You can access environment variables, properties, and more.
+- You can glob to collect files from disk, but it might not always be a good idea.
+  
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 [Modern CMake basics/variables]: https://cliutils.gitlab.io/modern-cmake/chapters/basics/variables.html
