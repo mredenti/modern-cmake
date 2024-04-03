@@ -157,7 +157,7 @@ Try the following:
 - Remove the quotes in set. What happens?
 - Try setting a cached variable using `-DMY_VARIABLE=something` **before** the `-P` flag. Which variable is shown?
 
-:::::::::::::::::::::::::::::::::::::::: solution
+:::::::::::::::::::::::::::::::::::::::: discussion
 
 The normal set command *only* sets the cached variable if it is not already set - this allows you to
 override cached variables with `-D`. Try:
