@@ -60,6 +60,14 @@ substituted, similar to the way Unix shell scripts behave. By default, no warnin
 an undefined variable, but the --warn-uninitialized option can be given to the cmake command to
 enable such warnings.
 
+Strings are not restricted to being a single line, they can contain embedded newline characters.
+They can also contain quotes, which require escaping with backslashes.
+
+If using CMake 3.0 or later, an alternative to quotes is to use the lua-inspired bracket syntax where
+the start of the content is marked by [=[ and the end with ]=]. Any number of = characters can
+appear between the square brackets, including none at all, but the same number of = characters
+must be used at the start and the end. 
+
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 Here we see the `set()` command, which sets a variable, and the `message()` command, which prints
