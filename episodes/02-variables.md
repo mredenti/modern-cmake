@@ -183,7 +183,7 @@ You can check to see if an environment variable is defined with `if(DEFINED ENV{
 
 ::::::::::::::::::::::::::::::::::::::::: callout
 
-## Note
+## Note:
 
 Setting an environment variable like this only affects the currently running CMake
 instance. As soon as the CMake run is finished, the change to the environment variable is lost. In
