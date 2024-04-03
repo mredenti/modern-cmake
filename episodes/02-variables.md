@@ -19,7 +19,6 @@ exercises: 10
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-# Variables
 
 For this exercise, we will just directly run a CMake Script, instead of running `CMakeLists.txt`.
 The command to do so is:
@@ -33,6 +32,7 @@ This way, we don't have so many little builds sitting around.
 
 ## Local variables
 
+The most basic way of defining a variable is with the ==set()== command.
 Let's start with a local variable.
 
 ```cmake
@@ -107,7 +107,7 @@ using [`option`][]:
 option(MY_OPTION "On or off" OFF)
 ```
 
-## Other variables
+## Environment variables
 
 You can get environment variables with `$ENV{name}`. You can check to see if an environment variable
 is defined with `if(DEFINED ENV{name})` (notice the missing `$`).
