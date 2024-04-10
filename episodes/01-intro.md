@@ -63,7 +63,7 @@ To recap, you should use CMake if:
 * You want to use a debugger
 
 
-## (More) Modern CMake
+### Modern CMake
 
 CMake has really changed dramatically since it was introduced around 2000. And, by the time of 2.8,
 it was available in lots of Linux Distribution package managers. However, this means there often are
