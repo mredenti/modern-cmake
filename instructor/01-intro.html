@@ -166,7 +166,9 @@
         
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#more-modern-cmake">(More) Modern CMake</a></li>
+        <ul><li><a href="#build-systems">Build Systems</a></li>
+<li><a href="#build-system-generators">Build System Generators</a></li>
+<li><a href="#more-modern-cmake">(More) Modern CMake</a></li>
 <li><a href="#selecting-a-minimum-in-2023">Selecting a minimum in 2023:</a></li>
 <li><a href="#other-sources">Other sources</a></li>
         </ul></div><!--/div.accordion-body-->
@@ -336,15 +338,16 @@ generator?</li>
 </div>
 <p>Building code is hard. You need long commands to build each part of
 your code; and you need do to this on many parts of your code.</p>
-<p>So people came up with <strong>Build Systems</strong>; these had ways
-to set up dependencies (such as file A needs to be built to build file
-B), and ways to store the commands used to build each file or type of
-file. These are language independent (mostly), allowing you to setup
-builds of almost anything; you can use <code>make</code> to build LaTeX
-documents if you wish. Some common build systems include make (the
-classic pervasive one), ninja (a newer one from Google designed in the
-age of build system generators), invoke (a Python one), and rake (Ruby
-make, nice syntax for Ruby users).</p>
+<section id="build-systems"><h2 class="section-heading">Build Systems<a class="anchor" aria-label="anchor" href="#build-systems"></a>
+</h2>
+<hr class="half-width"><p>These had ways to set up dependencies (such as file A needs to be
+built to build file B), and ways to store the commands used to build
+each file or type of file. These are language independent (mostly),
+allowing you to setup builds of almost anything; you can use
+<code>make</code> to build LaTeX documents if you wish. Some common
+build systems include make (the classic pervasive one), ninja (a newer
+one from Google designed in the age of build system generators), invoke
+(a Python one), and rake (Ruby make, nice syntax for Ruby users).</p>
 <p>However, this is:</p>
 <ul><li>Mostly hand coded: You have to know all the proper commands</li>
 <li>Platform/compiler dependent: You have to build the commands for each
@@ -352,19 +355,17 @@ compiler.</li>
 <li>Not aware of dependencies: If you require a library, you have to
 handle the paths, etc.</li>
 <li>Hard to extend; if you want to use an IDE instead, good luck.</li>
-</ul><p>Enter <strong>Build System Generators</strong> (hereby labeled BSGs
-for brevity). These understand the concepts of your programming language
-build; they usually support common compilers, languages, libraries, and
-output formats. These usually write a build system (or IDE) file and
-then let that do the actual build. The most popular BSG is CMake, which
-stands for Cross-platform Make. But as we’ve just shown, it is not
-really in the same category as make. Other BSGs include Autotools (old,
+</ul></section><section id="build-system-generators"><h2 class="section-heading">Build System Generators<a class="anchor" aria-label="anchor" href="#build-system-generators"></a>
+</h2>
+<hr class="half-width"><p>These understand the concepts of your programming language build;
+they usually support common compilers, languages, libraries, and output
+formats. These usually write a build system (or IDE) file and then let
+that do the actual build. The most popular BSG is CMake, which stands
+for Cross-platform Make. But as we’ve just shown, it is not really in
+the same category as make. Other BSGs include Autotools (old,
 inflexible), Bazel (by Google), SCons (older Python system), Meson
 (young Python system, very opinionated), and a few others. But CMake has
-unparalleled support by IDEs, libraries, and compilers. It also scales
-very well, with small projects able to pick it up easily (modern CMake,
-anyway), and massive projects like the CERN experiments being able to
-use it for thousands of modules.</p>
+unparalleled support by IDEs, libraries, and compilers.</p>
 <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2674_RC03/embed_loader.js"></script><script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/0cxh7f","geo":"US","time":"2004-01-01 2021-10-18"},{"keyword":"/g/11cmy51gz6","geo":"US","time":"2004-01-01 2021-10-18"},{"keyword":"/g/11bzyq50jp","geo":"US","time":"2004-01-01 2021-10-18"},{"keyword":"/m/0170rr","geo":"US","time":"2004-01-01 2021-10-18"},{"keyword":"/m/04dl04","geo":"US","time":"2004-01-01 2021-10-18"}],"category":0,"property":""}, {"exploreQuery":"date=all&geo=US&q=%2Fm%2F0cxh7f,%2Fg%2F11cmy51gz6,%2Fg%2F11bzyq50jp,%2Fm%2F0170rr,%2Fm%2F04dl04","guestPath":"https://trends.google.com:443/trends/embed/"}); </script><p>Note that both CMake and Make are custom languages rather than being
 built in an existing language, like rake and SCons, etc. While it is
 nice to consolidate languages, the requirement that you have an external
@@ -383,7 +384,7 @@ flags and commands</li>
 <li>You want to use a library</li>
 <li>You want to use tools, like Clang-Tidy, to help you code</li>
 <li>You want to use a debugger</li>
-</ul><section id="more-modern-cmake"><h2 class="section-heading">(More) Modern CMake<a class="anchor" aria-label="anchor" href="#more-modern-cmake"></a>
+</ul></section><section id="more-modern-cmake"><h2 class="section-heading">(More) Modern CMake<a class="anchor" aria-label="anchor" href="#more-modern-cmake"></a>
 </h2>
 <hr class="half-width"><p>CMake has really changed dramatically since it was introduced around
 2000. And, by the time of 2.8, it was available in lots of Linux

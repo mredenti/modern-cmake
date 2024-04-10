@@ -407,7 +407,7 @@ reinforce the objectives.</li>
   <h3 class="accordion-header" id="headingInstructor1">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>Instructor Note</h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Inline instructor notes can help inform instructors of timing
 challenges associated with the lessons. They appear in the “Instructor
@@ -439,7 +439,7 @@ View”</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Output</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -468,7 +468,7 @@ challenge blocks?<a class="anchor" aria-label="anchor" href="#challenge-2-how-do
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2">Show me the solution</h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>You can add a line with at least three colons and a
 <code>solution</code> tag.</p>
@@ -567,15 +567,17 @@ generator?</li>
 </div>
 <p>Building code is hard. You need long commands to build each part of
 your code; and you need do to this on many parts of your code.</p>
-<p>So people came up with <strong>Build Systems</strong>; these had ways
-to set up dependencies (such as file A needs to be built to build file
-B), and ways to store the commands used to build each file or type of
-file. These are language independent (mostly), allowing you to setup
-builds of almost anything; you can use <code>make</code> to build LaTeX
-documents if you wish. Some common build systems include make (the
-classic pervasive one), ninja (a newer one from Google designed in the
-age of build system generators), invoke (a Python one), and rake (Ruby
-make, nice syntax for Ruby users).</p>
+<section id="build-systems"><h2 class="section-heading">Build Systems<a class="anchor" aria-label="anchor" href="#build-systems"></a>
+</h2>
+<hr class="half-width">
+<p>These had ways to set up dependencies (such as file A needs to be
+built to build file B), and ways to store the commands used to build
+each file or type of file. These are language independent (mostly),
+allowing you to setup builds of almost anything; you can use
+<code>make</code> to build LaTeX documents if you wish. Some common
+build systems include make (the classic pervasive one), ninja (a newer
+one from Google designed in the age of build system generators), invoke
+(a Python one), and rake (Ruby make, nice syntax for Ruby users).</p>
 <p>However, this is:</p>
 <ul>
 <li>Mostly hand coded: You have to know all the proper commands</li>
@@ -584,20 +586,18 @@ compiler.</li>
 <li>Not aware of dependencies: If you require a library, you have to
 handle the paths, etc.</li>
 <li>Hard to extend; if you want to use an IDE instead, good luck.</li>
-</ul>
-<p>Enter <strong>Build System Generators</strong> (hereby labeled BSGs
-for brevity). These understand the concepts of your programming language
-build; they usually support common compilers, languages, libraries, and
-output formats. These usually write a build system (or IDE) file and
-then let that do the actual build. The most popular BSG is CMake, which
-stands for Cross-platform Make. But as we’ve just shown, it is not
-really in the same category as make. Other BSGs include Autotools (old,
+</ul></section><section id="build-system-generators"><h2 class="section-heading">Build System Generators<a class="anchor" aria-label="anchor" href="#build-system-generators"></a>
+</h2>
+<hr class="half-width">
+<p>These understand the concepts of your programming language build;
+they usually support common compilers, languages, libraries, and output
+formats. These usually write a build system (or IDE) file and then let
+that do the actual build. The most popular BSG is CMake, which stands
+for Cross-platform Make. But as we’ve just shown, it is not really in
+the same category as make. Other BSGs include Autotools (old,
 inflexible), Bazel (by Google), SCons (older Python system), Meson
 (young Python system, very opinionated), and a few others. But CMake has
-unparalleled support by IDEs, libraries, and compilers. It also scales
-very well, with small projects able to pick it up easily (modern CMake,
-anyway), and massive projects like the CERN experiments being able to
-use it for thousands of modules.</p>
+unparalleled support by IDEs, libraries, and compilers.</p>
 <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2674_RC03/embed_loader.js"></script><script type="text/javascript"> trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/m/0cxh7f","geo":"US","time":"2004-01-01 2021-10-18"},{"keyword":"/g/11cmy51gz6","geo":"US","time":"2004-01-01 2021-10-18"},{"keyword":"/g/11bzyq50jp","geo":"US","time":"2004-01-01 2021-10-18"},{"keyword":"/m/0170rr","geo":"US","time":"2004-01-01 2021-10-18"},{"keyword":"/m/04dl04","geo":"US","time":"2004-01-01 2021-10-18"}],"category":0,"property":""}, {"exploreQuery":"date=all&geo=US&q=%2Fm%2F0cxh7f,%2Fg%2F11cmy51gz6,%2Fg%2F11bzyq50jp,%2Fm%2F0170rr,%2Fm%2F04dl04","guestPath":"https://trends.google.com:443/trends/embed/"}); </script><p>Note that both CMake and Make are custom languages rather than being
 built in an existing language, like rake and SCons, etc. While it is
 nice to consolidate languages, the requirement that you have an external
@@ -617,8 +617,7 @@ flags and commands</li>
 <li>You want to use a library</li>
 <li>You want to use tools, like Clang-Tidy, to help you code</li>
 <li>You want to use a debugger</li>
-</ul>
-<section id="more-modern-cmake"><h2 class="section-heading">(More) Modern CMake<a class="anchor" aria-label="anchor" href="#more-modern-cmake"></a>
+</ul></section><section id="more-modern-cmake"><h2 class="section-heading">(More) Modern CMake<a class="anchor" aria-label="anchor" href="#more-modern-cmake"></a>
 </h2>
 <hr class="half-width">
 <p>CMake has really changed dramatically since it was introduced around
@@ -888,7 +887,7 @@ of running <code>CMakeLists.txt</code>. The command to do so is:</p>
   <h3 class="accordion-header" id="headingInstructor1">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>Instructor Note</h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>The name of the variable, varName, can contain letters, numbers and
 underscores, with letters being case-sensitive. The name may also
@@ -962,7 +961,7 @@ repository].</mode></p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>CMake treats all variables as strings. In various contexts
 (e.g. CMake GUI and TUI), variables may be interpreted as a different
@@ -1045,7 +1044,7 @@ descriptions.</p>
   <h3 class="accordion-header" id="headingInstructor2">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>Instructor Note</h3>
 </button>
-<div id="collapseInstructor2" class="accordion-collapse collapse" aria-labelledby="headingInstructor2" data-bs-parent="#accordionInstructor2">
+<div id="collapseInstructor2" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor2" aria-labelledby="headingInstructor2">
 <div class="accordion-body">
 <p>Cache variables are primarily intended as a customization point for
 developers. Rather than hardcoding the value in the CMakeLists.txt file
@@ -1223,7 +1222,7 @@ docs</a>
   <h3 class="accordion-header" id="headingInstructor3">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>Instructor Note</h3>
 </button>
-<div id="collapseInstructor3" class="accordion-collapse collapse" aria-labelledby="headingInstructor3" data-bs-parent="#accordionInstructor3">
+<div id="collapseInstructor3" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor3" aria-labelledby="headingInstructor3">
 <div class="accordion-body">
 <p>Cache variables have more information attached to them than a normal
 variable, including a nominal type and a documentation string. Both must

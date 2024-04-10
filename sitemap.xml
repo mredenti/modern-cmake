@@ -34,6 +34,12 @@
     <loc>https://mredenti.github.io/modern-cmake/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://mredenti.github.io/modern-cmake/aio.html</loc>
+  </url>
+  <url>
+    <loc>https://mredenti.github.io/modern-cmake/images.html</loc>
+  </url>
+  <url>
     <loc>https://mredenti.github.io/modern-cmake/index.html</loc>
   </url>
   <url>
@@ -70,10 +76,22 @@
     <loc>https://mredenti.github.io/modern-cmake/instructor/LICENSE.html</loc>
   </url>
   <url>
+    <loc>https://mredenti.github.io/modern-cmake/instructor/aio.html</loc>
+  </url>
+  <url>
+    <loc>https://mredenti.github.io/modern-cmake/instructor/images.html</loc>
+  </url>
+  <url>
     <loc>https://mredenti.github.io/modern-cmake/instructor/index.html</loc>
   </url>
   <url>
+    <loc>https://mredenti.github.io/modern-cmake/instructor/instructor-notes.html</loc>
+  </url>
+  <url>
     <loc>https://mredenti.github.io/modern-cmake/instructor/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://mredenti.github.io/modern-cmake/instructor/key-points.html</loc>
   </url>
   <url>
     <loc>https://mredenti.github.io/modern-cmake/instructor/profiles.html</loc>
@@ -82,7 +100,13 @@
     <loc>https://mredenti.github.io/modern-cmake/instructor/reference.html</loc>
   </url>
   <url>
+    <loc>https://mredenti.github.io/modern-cmake/instructor-notes.html</loc>
+  </url>
+  <url>
     <loc>https://mredenti.github.io/modern-cmake/introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://mredenti.github.io/modern-cmake/key-points.html</loc>
   </url>
   <url>
     <loc>https://mredenti.github.io/modern-cmake/profiles.html</loc>
