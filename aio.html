@@ -421,7 +421,7 @@ reinforce the objectives.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Output</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -450,7 +450,7 @@ challenge blocks?<a class="anchor" aria-label="anchor" href="#challenge-2-how-do
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2">Show me the solution</h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>You can add a line with at least three colons and a
 <code>solution</code> tag.</p>
@@ -593,9 +593,10 @@ flags and commands</li>
 <li>You want to use a library</li>
 <li>You want to use tools, like Clang-Tidy, to help you code</li>
 <li>You want to use a debugger</li>
-</ul></section><section id="more-modern-cmake"><h2 class="section-heading">(More) Modern CMake<a class="anchor" aria-label="anchor" href="#more-modern-cmake"></a>
-</h2>
-<hr class="half-width">
+</ul>
+<div class="section level3">
+<h3 id="modern-cmake">Modern CMake<a class="anchor" aria-label="anchor" href="#modern-cmake"></a>
+</h3>
 <p>CMake has really changed dramatically since it was introduced around
 2000. And, by the time of 2.8, it was available in lots of Linux
 Distribution package managers. However, this means there often are
@@ -640,6 +641,7 @@ level set on them.</p>
 like <code>cxx_std_11</code>, instead of manually listing a bunch of
 features. This was used for C++17 and later C++20 and C__23,
 exclusively.</p>
+</div>
 </div>
 </div>
 </div>
