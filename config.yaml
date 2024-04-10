@@ -67,7 +67,8 @@ episodes:
 - 05-targets.md
 - 06-findingdependencies.md
 - 07-projectstructure.md
-- 08-installingdependencies.md
+- 08-testing.md
+- 09-installingdependencies.md
 #- 02-building.md
 #- 03-cmakelists.md
 #- 07-commonproblems.md
