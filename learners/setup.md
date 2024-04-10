@@ -35,12 +35,21 @@ systems (and potentially add more, e.g. online setup) in the solutions blocks.
 module load cmake/3.21.4
 ```
 
-### Leonardo
+::::::::::::::::::::::::
 
+
+:::::::::::::::: spoiler
+
+### Leonardo
 
 ```shell
 module load cmake/3.27.1
 ```
+
+::::::::::::::::::::::::
+
+
+:::::::::::::::: spoiler
 
 ### Windows
 
