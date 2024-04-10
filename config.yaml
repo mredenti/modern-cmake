@@ -68,10 +68,10 @@ episodes:
 - 06-findingdependencies.md
 - 07-projectstructure.md
 - 08-installingdependencies.md
-# - 02-building.md
+#- 02-building.md
 #- 03-cmakelists.md
 #- 07-commonproblems.md
-# Additional Topics: libraries, linking, debugging, performance
+#- Additional Topics: libraries, linking, debugging, performance
 #- 08-debugging.md
 #- 10-root.md
 #- 11-functions.md
