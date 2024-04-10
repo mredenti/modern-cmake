@@ -29,6 +29,19 @@ systems (and potentially add more, e.g. online setup) in the solutions blocks.
 
 :::::::::::::::: spoiler
 
+### Galileo100
+
+```shell
+module load cmake/3.21.4
+```
+
+### Leonardo
+
+
+```shell
+module load cmake/3.27.1
+```
+
 ### Windows
 
 Use PuTTY
