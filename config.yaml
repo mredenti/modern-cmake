@@ -71,6 +71,7 @@ episodes:
 # - 02-building.md
 #- 03-cmakelists.md
 #- 07-commonproblems.md
+# Additional Topics: libraries, linking, debugging, performance
 #- 08-debugging.md
 #- 10-root.md
 #- 11-functions.md
