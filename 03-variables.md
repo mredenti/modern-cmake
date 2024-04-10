@@ -19,7 +19,7 @@ exercises: 10
 
 
 
-For this exercise, we will just directly run a CMake Script, instead of running `CMakeLists.txt`. f
+For this exercise, we will just directly run a CMake Script, instead of running `CMakeLists.txt`. 
 The command to do so is:
 
 ```bash

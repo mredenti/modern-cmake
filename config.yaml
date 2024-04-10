@@ -61,13 +61,13 @@ contact: 'michael.redenti@gmail.com' # FIXME
 episodes: 
 - introduction.md
 - 01-intro.md
-- 02-simple-targets.md
+- 02-simpletargets.md
 - 03-variables.md
 - 04-functions.md
 - 05-targets.md
-- 06-finding-dependencies.md
-- 07-project-structure.md
-- 08-installing-dependencies.md
+- 06-findingdependencies.md
+- 07-projectstructure.md
+- 08-installingdependencies.md
 # - 02-building.md
 #- 03-cmakelists.md
 #- 07-commonproblems.md
