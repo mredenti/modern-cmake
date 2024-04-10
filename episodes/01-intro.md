@@ -160,5 +160,9 @@ There are some other places to find good information on the web. Here are some o
 - Build system generators describe general relationships.
 - Modern CMake is simpler and reduces the chance of build problems.
 - CMake is not a build system, it is a cross-platform build generator.
+- CMake’s two-stage setup process was introduced in Section 2.3, “Generating Project Files”. In the
+first stage, the CMakeLists.txt file is read and a representation of the project is built up in memory.
+This is called the configure stage. If the configure stage is successful, the generate stage can then be
+executed to create the build tool’s project files in the build directory
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
