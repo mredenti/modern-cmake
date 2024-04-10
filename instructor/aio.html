@@ -1433,6 +1433,21 @@ associated with the project may be desirable.</li>
 </div>
 </div>
 </div>
+<p>As a project grows it will start to likely rely on third party
+dependencies. For instance, it might require specific libraries, such as
+FFTW3, to be already available on the file system which perhaps define a
+range of things including targets, functions, variables…</p>
+<p><strong>Notes:</strong></p>
+<ul class="task-list">
+<li><label><input type="checkbox">A later episode will explore CMake’s
+support for fetching, building and installing missing
+dependencies.</label></li>
+<li><label><input type="checkbox">A later episode will explore CMake’s
+support for preparing a project for being found by other
+projects.</label></li>
+</ul>
+<p>CMake provides features which enable projects to find things and to
+be found by or incorporated into other projects:</p>
 <div class="section level1">
 <h1 id="cmake-find_package">CMake <code>find_package()</code>
 <a class="anchor" aria-label="anchor" href="#cmake-find_package"></a>
@@ -1444,6 +1459,12 @@ associated with the project may be desirable.</li>
 <div class="section level2">
 <h2 id="cmake-modules">CMake Modules<a class="anchor" aria-label="anchor" href="#cmake-modules"></a>
 </h2>
+<div class="section level3">
+<h3 id="what-to-do-when-neither-options-above-are-available">What to do when neither options above are available?<a class="anchor" aria-label="anchor" href="#what-to-do-when-neither-options-above-are-available"></a>
+</h3>
+<p>CMake modules add the ability to use <code>pkg-config</code> to
+provide information about external packages, while other modules
+facilitate writing package files for other projects to consume.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1455,6 +1476,7 @@ associated with the project may be desirable.</li>
 <ul>
 <li>fd</li>
 </ul>
+</div>
 </div>
 </div>
 </div>
