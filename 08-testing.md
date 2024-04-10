@@ -1,32 +1,19 @@
 ---
-title: Finding Dependencies 
+title: Testing with CMake/CTest 
 teaching: 10
 exercises: 10
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How to find and consume TPL?
+- fdfd
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Ex... 
-  
+- fdfd
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-
-# CMake `find_package()`
-
-
-# Find CMake configuration files
-
-
-
-## CMake Modules 
-
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
