@@ -16,15 +16,6 @@ Download the [data zip file](https://example.com/FIXME) and unzip it to your Des
 
 ## Software Setup
 
-::::::::::::::::::::::::::::::::::::::: discussion
-
-### Details
-
-Setup for different systems is presented in the below dropdown menus. 
-Each will give a general overview of the software required for this lesson.  
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::
-
 :::::::::::::::: spoiler
 
 ### Galileo100
