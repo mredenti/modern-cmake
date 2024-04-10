@@ -1,0 +1,92 @@
+#------------------------------------------------------------
+# Values for this lesson.
+#------------------------------------------------------------
+
+# Which carpentry is this (swc, dc, lc, or cp)?
+# swc: Software Carpentry
+# dc: Data Carpentry
+# lc: Library Carpentry
+# cp: Carpentries (to use for instructor training for instance)
+# incubator: The Carpentries Incubator
+carpentry: 'incubator'
+
+# Overall title for pages.
+title: 'Modern CMake' # FIXME
+
+# Date the lesson was created (YYYY-MM-DD, this is empty by default)
+created: ~ # '2024-04-02'
+
+# Comma-separated list of keywords for the lesson
+keywords: 'lesson, The Carpentries, cmake' # FIXME
+
+# Life cycle stage of the lesson
+# possible values: pre-alpha, alpha, beta, stable
+life_cycle: 'pre-alpha' # FIXME
+
+# License of the lesson
+license: 'CC-BY 4.0'
+
+# Link to the source repository for this lesson
+source: 'https://github.com/mredenti/modern-cmake' # FIXME
+
+# Default branch of your lesson
+branch: 'main'
+
+# Who to contact if there are any issues
+contact: 'michael.redenti@gmail.com' # FIXME
+
+# Navigation ------------------------------------------------
+#
+# Use the following menu items to specify the order of
+# individual pages in each dropdown section. Leave blank to
+# include all pages in the folder.
+#
+# Example -------------
+#
+# episodes:
+# - introduction.md
+# - first-steps.md
+#
+# learners:
+# - setup.md
+#
+# instructors:
+# - instructor-notes.md
+#
+# profiles:
+# - one-learner.md
+# - another-learner.md
+
+# Order of episodes in your lesson
+episodes: 
+- introduction.md
+- 01-intro.md
+- 02-simple-targets.md
+- 03-variables.md
+- 04-functions.md
+- 05-targets.md
+- 06-finding-dependencies.md
+- 07-project-structure.md
+- 08-installing-dependencies.md
+# - 02-building.md
+#- 03-cmakelists.md
+#- 07-commonproblems.md
+# Additional Topics: libraries, linking, debugging, performance
+#- 08-debugging.md
+#- 10-root.md
+#- 11-functions.md
+
+# Information for Learners
+learners: 
+
+# Information for Instructors
+instructors: 
+
+# Learner Profiles
+profiles: 
+
+# Customisation ---------------------------------------------
+#
+# This space below is where custom yaml items (e.g. pinning
+# sandpaper and varnish versions) should live
+
